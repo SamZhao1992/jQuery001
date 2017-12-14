@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../scripts/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            //  选择div中P标签的父级元素的第一个子元素
+            // $('div p:first-child').css({'color':'red', 'font-size':'30px'});
+            //  选择div中span标签的父级元素的第一个子元素(父级的第一个子元素必须是span否则不会被选中)
+            // $('div span:first-child').css({'color':'blue', 'font-size':'30px'});
+            //  选择div中span标签的父级元素的第一个span标签
+            // $('div span:first-of-type').css({'color':'blue', 'font-size':'30px'});
+            //  选择div中span标签的父级元素的第一个子元素  !!!注意从1开始而不是0
+            //  注意如果第一个子元素是span则选中 不是则不选
+            // $('div span:nth-child(2)').css({'color':'blue', 'font-size':'30px'});
+            // $('div span:nth-last-child(1)').css({'color':'red', 'font-size':'30px'});
+            //  选择div中span标签的父级元素的第二个span标签
+            // $('div span:nth-of-type(2)').css({'color':'red', 'font-size':'30px'});
+            //  选择是独生子的P标签
+            // $('div p:only-child').css({'color':'red', 'font-size':'30px'});
+            //  选择的是父级元素 唯一P标签 的P标签  of-type 会将其余标签过滤(即 没有同级P标签)
+            $('div p:only-of-type').css({'color':'red', 'font-size':'30px'});
+        });
+    </script>
+
+</head>
+<body>
+    <div>
+        <p>我是独生子</p>
+        <span></span>
+    </div>
+    <div>
+        <p>我是P标签0</p>
+        <span>我是Span标签1</span>
+        <p>我是P标签2</p>
+        <span>我是Span标签3</span>
+        <p>我是P标签4</p>
+        <span>我是Span标签5</span>
+        <p>我是P标签6</p>
+        <span>我是Span标签7</span>
+        <p>我是P标签8</p>
+        <span>我是Span标签9</span>
+    </div>
+    ==============================
+    <div>
+        <p>我是P标签0</p>
+        <span>我是Span标签1</span>
+        <p>我是P标签2</p>
+        <span>我是Span标签3</span>
+        <p>我是P标签4</p>
+        <span>我是Span标签5</span>
+        <p>我是P标签6</p>
+        <span>我是Span标签7</span>
+        <p>我是P标签8</p>
+        <span>我是Span标签9</span>
+    </div>
+</body>
+</html>

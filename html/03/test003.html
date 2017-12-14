@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../scripts/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            //原来讲过的css选择器在jQuery中都能使用
+            // $('#box div p').css({'color': 'red', 'font-size': '25px'});
+
+            // > 选择的是box中 儿子辈的P 标签
+            // $('#box>p').css({'color': 'red', 'font-size': '25px'});
+
+            // + 选择是紧邻在one后面的标签--单个
+            // $('.one+p').css({'color': 'blue', 'font-size': '45px'});
+
+            // ~ 选择是one 后面的所有同级p标签
+            // $('.one~p').css({'color': 'yellow', 'font-size': '45px'});
+
+            // 选择的是box中第一个p标签
+            // $('#box p:first').css({'color': 'red', 'font-size': '25px'});
+            // $('#box p:last').css({'color': 'blue', 'font-size': '25px'});
+
+            // 选择的是box中所有的p标签 排除掉class='one'的
+            // $('#box p:not(.one)').css({'color': 'blue', 'font-size': '25px'});
+
+            // 选择的是box中所有序号是偶数(even) 奇数(odd)的p标签
+            // $('#box p:even').css({'color': 'blue', 'font-size': '25px'});
+            // $('#box p:odd').css({'color': 'red', 'font-size': '25px'});
+
+            // 选择的是box中序号为3 的p标签  下标均从0开始
+            // $('#box p:eq(3)').css({'color': 'red', 'font-size': '25px'});
+            // // 选择的是box中序号>3 的p标签  下标均从0开始
+            // $('#box p:gt(3)').css({'color': 'blue', 'font-size': '25px'});
+            // // 选择的是box中序号<3 的p标签  下标均从0开始
+            // $('#box p:lt(3)').css({'color': 'yellow', 'font-size': '25px'});
+
+            // 选择的是box中 内容包含 人 字样的P标签
+            // $('#box p:contains(人)').css({'color': 'blue', 'font-size': '25px'});
+            // 选择的是box中 为空的 P 标签
+            // $('#box p:empty').css({'color': 'red', 'font-size': '25px', 'width': '500px', 'height': '50px', 'background': 'blue'});
+            // 选择的是box中 含有span标签的p标签
+            $('#box p:has(span)').css({'color': 'blue', 'font-size': '25px'});
+
+            // 选择的是box中 非空的P标签
+            $('#box p:parent').css({'color': 'red', 'font-size': '25px'});
+
+
+        });
+    </script>
+
+</head>
+<body>
+    <div id="box">
+        <p>人人人人热人人1</p>
+        <p class="one">人人人人热人人2</p>
+        <p>人人人人热人人3 <span>我是span</span></p>
+        <p>人人人人热人人4</p>
+        <p>人人人人热人人5</p>
+        <p>人人人人热人人6 <span>我是span</span></p>
+        <p></p>
+        <p></p>
+        <div>
+            <p>我们也是P标签1</p>
+            <p>我们也是P标签2</p>
+            <p>我们也是P标签3</p>
+            <p>我们也是P标签4</p>
+            <p>我们也是P标签5</p>
+            <p>我们也是P标签6</p>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+</body>
+</html>
